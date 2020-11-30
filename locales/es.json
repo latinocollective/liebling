@@ -60,5 +60,19 @@
   "Your email address": "Tu dirección de correo electrónico",
   "of": "de",
   "with the email address": "con la dirección de correo electrónico",
-  "with this tag": "con esta etiqueta"
+  "with this tag": "con esta etiqueta",
+
+  "% collections": "% colecciones",
+  "1 collection": "1 colección",
+  "Apparently there are no collections at the moment, check again later.": "Aparentemente no hay colecciones en este momento, revisa más tarde.",
+  "Get the latest collections delivered right to your inbox.": "Recibe las últimas colecciones directamente en tu bandeja de entrada.",
+  "Newer collections": "Colecciones más recientes",
+  "No collections": "No hay colecciones",
+  "No collections found": "No se encontraron colecciones",
+  "Older colllections": "Colecciones más antiguas",
+  "Designed by": "Diseñado por",
+  "Stay up to date! Get all the latest & greatest collections delivered straight to your inbox.": "Mantente al día! Recibe todas las mejores y más recientes colecciones directamente en tu bandeja de entrada.",
+  "No recent collections found :(": "No se han encontrado colecciones recientes :(",
+  "Recent collections": "Colecciones recientes"
+  
 }

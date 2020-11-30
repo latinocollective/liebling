@@ -60,5 +60,19 @@
   "Your email address": "Your email address",
   "of": "of",
   "with the email address": "with the email address",
-  "with this tag": "with this tag"
+  "with this tag": "with this tag",
+
+  "% collections": "% collections",
+  "1 collection": "1 collection",
+  "Apparently there are no collections at the moment, check again later.": "Apparently there are no collections at the moment, check again later.",
+  "Get the latest collections delivered right to your inbox.": "Get the latest collections delivered right to your inbox.",
+  "Newer collections": "Newer collections",
+  "No collections": "No collections",
+  "No collections found": "No collections found",
+  "Older colllections": "Older collections",
+  "Designed by": "Designed by",
+  "Stay up to date! Get all the latest & greatest collections delivered straight to your inbox.": "Stay up to date! Get all the latest & greatest collections delivered straight to your inbox.",
+  "No recent collections found :(": "No recent collections found :(",
+  "Recent collections": "Recent collections"
+  
 }
