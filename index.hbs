@@ -25,7 +25,10 @@ into the {body} of the default.hbs template --}}
 
 <main class="main-wrap">
   {{!-- Inject styles of the hero image to make it responsive --}}
+  
+  {{#if @site.cover_image}}
   {{> hero background=@site.cover_image}}
+  {{/if}}
   <div class="m-hero__content" data-aos="fade-down">
     <h1 class="m-hero-title bigger">{{@site.title}}</h1>
     {{#if @site.description}}
