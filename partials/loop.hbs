@@ -10,7 +10,7 @@
       {{#if feature_image}}
         <img class="m-article-card__picture-background" src="{{img_url feature_image size="m"}}" loading="lazy" alt="">
       {{/if}}
-      <a href="{{primary_author.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Designed by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
+      <a href="{{primary_tag.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_tag.name}}" data-tippy-content="{{primary_tag.name}}">
         {{#if primary_tag.feature_image}}
           <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
         {{else}}
@@ -23,9 +23,9 @@
         </a>
       {{/if}}
     </div>
-    {{#if primary_tag}}
+    {{#if primary_author}}
       <div class="m-article-card__info">
-        <a href="{{primary_tag.url}}" class="m-article-card__tag">{{primary_tag.name}}</a>
+        <a href="{{primary_author.url}}" class="m-article-card__tag">{{primary_author.name}}</a>
     {{else}}
       <div class="m-article-card__info no-tag">
     {{/if}}
