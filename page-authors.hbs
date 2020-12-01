@@ -83,6 +83,13 @@ into the {body} of the default.hbs template --}}
                             </a>
                           </li>
                         {{/if}}
+                        {{#if instagram}}
+                          <li>
+                            <a href="https://instagram.com/{{instagram}}" target="_blank" rel="noopener" aria-label="Instagram">
+                              <span class="icon-instagram" aria-hidden="true"></span>
+                            </a>
+                          </li>
+                        {{/if}}
                       </ul>
                     {{/has}}
                   </div>
