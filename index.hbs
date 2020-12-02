@@ -75,7 +75,7 @@ into the {body} of the default.hbs template --}}
                                 <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
                             </a>
                           {{/if}}
-                          {{#if primary_author}}
+                          {{#if primary_author.profile_image}}
                             <a href="{{primary_author.url}}" class="m-featured-article__tag">{{primary_author.name}}</a>
                           {{/if}}
                         </div>
