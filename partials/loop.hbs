@@ -10,13 +10,11 @@
       {{#if feature_image}}
         <img class="m-article-card__picture-background" src="{{img_url feature_image size="m"}}" loading="lazy" alt="">
       {{/if}}
-      <a href="{{primary_tag.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_tag.name}}" data-tippy-content="{{primary_tag.name}}">
-        {{#if primary_tag.feature_image}}
-          <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
-        {{else}}
-          <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
-        {{/if}}
-      </a>
+      {{#if primary_tag.feature_image}}
+        <a href="{{primary_tag.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_tag.name}}" data-tippy-content="{{primary_tag.name}}">
+            <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
+        </a>
+      {{/if}}
       {{#if featured}}
         <a href="{{url}}" class="m-article-card__featured js-tooltip" data-tippy-content="{{t "Featured"}}" aria-label="{{t "Featured"}}">
           <span class="icon-star" aria-hidden="true"></span>

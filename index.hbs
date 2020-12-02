@@ -70,11 +70,11 @@ into the {body} of the default.hbs template --}}
                           {{/if}}
                         </div>
                         <div class="m-featured-article__meta">
-                          <a href="{{primary_tag.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_tag.name}}" data-tippy-content="{{primary_tag.name}}">
-                            {{#if primary_tag.feature_image}}
-                              <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
-                            {{/if}}
-                          </a>
+                          {{#if primary_tag.feature_image}}
+                            <a href="{{primary_tag.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_tag.name}}" data-tippy-content="{{primary_tag.name}}">
+                                <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
+                            </a>
+                          {{/if}}
                           {{#if primary_author}}
                             <a href="{{primary_author.url}}" class="m-featured-article__tag">{{primary_author.name}}</a>
                           {{/if}}
