@@ -32,9 +32,8 @@ into the {body} of the default.hbs template --}}
   {{> hero background=@site.cover_image}}
   {{/if}}
   <div class="m-hero__content" data-aos="fade-down">
-    <h1 class="m-hero-title bigger">{{@site.title}}</h1>
     {{#if @site.description}}
-      <p class="m-hero-description bigger">{{@site.description}}</p>
+      <h1 class="m-hero-title bigger">{{@site.description}}</h1>
     {{/if}}
     {{#if @labs.subscribers}}
       <a href="{{@site.url}}/subscribe" class="m-button filled">Suscríbete</a>
