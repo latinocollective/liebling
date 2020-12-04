@@ -20,7 +20,7 @@ It can be used also as the home page or the default page.
 into the {body} of the default.hbs template --}}
 {{!< default}}
 
-{{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
+{{#contentFor "lang"}}es{{/contentFor}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
 {{> header background=@site.cover_image}}
@@ -37,17 +37,17 @@ into the {body} of the default.hbs template --}}
       <p class="m-hero-description bigger">{{@site.description}}</p>
     {{/if}}
     {{#if @labs.subscribers}}
-      <a href="{{@site.url}}/subscribe" class="m-button filled">{{t "Subscribe"}}</a>
+      <a href="{{@site.url}}/subscribe" class="m-button filled">Suscríbete</a>
     {{/if}}
     {{#if @labs.members}}
-      <a href="{{@site.url}}/newsletter" class="m-button filled">{{t "Subscribe"}}</a>
+      <a href="{{@site.url}}/newsletter" class="m-button filled">Suscríbete</a>
     {{/if}}
   </div>
   </section>
   <div class="l-content">
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
       <div class="l-grid centered">
-        {{#get "posts" filter="featured:true + tag:-[hash-es,hash-pt]" include="authors,tags" limit="5" as |featured|}}
+        {{#get "posts" filter="featured:true + tag:hash-es" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
             <div class="m-featured-slider glide js-featured-slider">
               <div class="glide__track" data-glide-el="track">
@@ -83,7 +83,7 @@ into the {body} of the default.hbs template --}}
                         </div>
                         <div class="m-featured-article__ribbon">
                           <span class="icon-star"></span>
-                          <span>{{t "Featured"}}</span>
+                          <span>Destacado</span>
                         </div>
                         <a href="{{url}}" class="m-featured-article__content">
                           <h2 class="m-featured-article__title js-featured-article-title" title="{{title}}">
@@ -101,10 +101,10 @@ into the {body} of the default.hbs template --}}
                 </div>
               </div>
               <div data-glide-el="controls" class="glide__arrows js-featured-slider-controls">
-                <button data-glide-dir="<" class="m-icon-button in-featured-articles glide-prev js-featured-slider-previous" aria-label="{{t "Previous"}}">
+                <button data-glide-dir="<" class="m-icon-button in-featured-articles glide-prev js-featured-slider-previous" aria-label="Anterior">
                   <span class="icon-arrow-left" aria-hidden="true"></span>
                 </button>
-                <button data-glide-dir=">" class="m-icon-button in-featured-articles glide-next js-featured-slider-next" aria-label="{{t "Next"}}">
+                <button data-glide-dir=">" class="m-icon-button in-featured-articles glide-next js-featured-slider-next" aria-label="Siguiente">
                   <span class="icon-arrow-right" aria-hidden="true"></span>
                 </button>
               </div>
