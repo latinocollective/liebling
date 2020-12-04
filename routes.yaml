@@ -16,7 +16,16 @@ collections:
   /:
     permalink: /{slug}/
     template: index
+    filter: 'tag:-[hash-es,hash-pt]'
+  /es/:
+    permalink: /es/{slug}/
+    template: index-es
+    filter: 'tag:hash-es'
+  /pt/:
+    permalink: /pt/{slug}/
+    template: index-pt-br
+    filter: 'tag:hash-pt'
 
 taxonomies:
   tag: /tag/{slug}/
-  author: /author/{slug}/
+  author: /designer/{slug}/
