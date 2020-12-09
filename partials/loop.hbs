@@ -1,6 +1,7 @@
 {{!-- The template below includes the markup for each post --}}
 
 {{#foreach posts}}
+  {{^has tag="#es,#pt"}}
   {{#is "post"}}
     <div class="m-recommended-slider__item glide__slide">
   {{/is}}
@@ -44,6 +45,7 @@
   {{#is "post"}}
     </div>
   {{/is}}
+  {{/has}}
   {{else}}
     <header class="m-heading no-margin">
       <h3>{{t "No collections found"}}</h3>

@@ -18,7 +18,17 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
 {{#tag}}
+{{#has slug=name}}
   {{> header background=feature_image}}
+{{else}}
+  {{#get "tags" filter="slug:{{name}}-es + id:{{id}}" limit="1"}}
+    {{#if tags}}
+      {{> header-es background=feature_image}}
+    {{else}}
+      {{> header-pt-br background=feature_image}}
+    {{/if}}
+  {{/get}}
+{{/has}}
 {{/tag}}
 
 <main class="main-wrap">

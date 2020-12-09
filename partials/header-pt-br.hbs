@@ -96,7 +96,7 @@ This header template is shared across all the pages.
                     </section>
                     <section class="m-tags">
                       <h3 class="m-submenu-title">Marcadores</h3>
-                      {{#get "tags" limit="10"}}
+                      {{#get "tags" filter="description:pt" limit="10"}}
                         <ul>
                           {{#foreach tags}}
                             <li>
@@ -114,9 +114,18 @@ This header template is shared across all the pages.
             </ul>
           </nav>
           <div class="m-nav__right">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Menú principal">
             <button class="m-icon-button in-menu-main js-open-search" aria-label="Abrir pesquisa">
               <span class="icon-search" aria-hidden="true"></span>
             </button>
+            <ul>
+              <li class="nav-es {{#if current}} nav-current{{/if}}">
+                <a href="/">EN</a>
+              </li>
+              <li class="nav-es {{#if current}} nav-current{{/if}}">
+                <a href="/es">ES</a>
+              </li>
+            </ul>
             <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Alternar modo escuro" tabindex="0">
               <label for="toggle-darkmode" class="sr-only">
                 Alternar modo escuro
@@ -127,6 +136,7 @@ This header template is shared across all the pages.
                 <span class="icon-sunny sun" aria-hidden="true"></span>
               </div>
             </div>
+          </nav>
           </div>
         </div>
       </div>
