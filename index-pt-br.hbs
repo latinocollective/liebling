@@ -23,7 +23,7 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "lang"}}pt-br{{/contentFor}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
-{{> header background=@site.cover_image}}
+{{> header-pt-br background=@site.cover_image}}
 
 <main class="main-wrap">
   {{!-- Inject styles of the hero image to make it responsive --}}
@@ -111,7 +111,7 @@ into the {body} of the default.hbs template --}}
           {{/if}}
         {{/get}}
         {{!-- The tag below iterates over all the posts --}}
-        {{> "loop"}}
+        {{> "loop-pt-br"}}
       </div>
     </div>
     {{!-- Links to Previous/Next posts --}}

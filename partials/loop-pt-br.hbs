@@ -1,0 +1,54 @@
+{{!-- The template below includes the markup for each post --}}
+
+{{#foreach posts}}
+  {{#is "post"}}
+    <div class="m-recommended-slider__item glide__slide">
+  {{/is}}
+  <article class="m-article-card {{#unless feature_image}}no-picture{{/unless}} {{post_class}}">
+    <div class="m-article-card__picture">
+      <a href="{{url}}" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+      {{#if feature_image}}
+        <img class="m-article-card__picture-background" src="{{img_url feature_image size="m"}}" loading="lazy" alt="">
+      {{/if}}
+      {{#if primary_tag.feature_image}}
+        <a href="{{primary_tag.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_tag.name}}" data-tippy-content="{{primary_tag.name}}">
+            <div style="background-image: url({{img_url primary_tag.feature_image size="xs"}});"></div>
+        </a>
+      {{/if}}
+      {{#if featured}}
+        <a href="{{url}}" class="m-article-card__featured js-tooltip" data-tippy-content="Em destaque" aria-label="Em destaque">
+          <span class="icon-star" aria-hidden="true"></span>
+        </a>
+      {{/if}}
+    </div>
+    {{#if primary_author.profile_image}}
+      <div class="m-article-card__info">
+        <a href="{{primary_author.url}}" class="m-article-card__tag">{{primary_author.name}}</a>
+    {{else}}
+      <div class="m-article-card__info no-tag">
+    {{/if}}
+      <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title {{#unless feature_image}}js-article-card-title-no-image{{/unless}}" title="{{title}}">
+            {{title}}
+          </h2>
+        </div>
+        {{!-- <div class="m-article-card__timestamp">
+          <span>{{date published_at timeago="true"}}</span>
+          <span>&bull;</span>
+          <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+        </div> --}}
+      </a>
+    </div>
+  </article>
+  {{#is "post"}}
+    </div>
+  {{/is}}
+  {{else}}
+    <header class="m-heading no-margin">
+      <h3>Nenhuma coleção encontrada</h3>
+      <p>
+        Parece que não há artigos no momento. Que tal voltar mais tarde?
+      </p>
+    </header>
+{{/foreach}}

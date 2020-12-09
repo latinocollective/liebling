@@ -17,11 +17,11 @@ This template is used for the post page.
 into the {body} of the default.hbs template --}}
 {{!< default}}
 
-{{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
+{{#contentFor "lang"}}pt-br{{/contentFor}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
 {{#post}}
-  {{> header background=feature_image}}
+  {{> header-pt-br background=feature_image}}
 {{/post}}
 
 <main class="main-wrap">
@@ -46,7 +46,7 @@ into the {body} of the default.hbs template --}}
                   <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
                 {{/if}}
-                <span class="m-heading__meta__time">{{date published_at format="MM/DD/YYYY"}}</span>
+                <span class="m-heading__meta__time">{{date published_at format="DD/MM/YYYY"}}</span>
               </div>
             </header>
             <div class="pos-relative js-post-content">
@@ -60,7 +60,7 @@ into the {body} of the default.hbs template --}}
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
-                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="{{t "Scroll to top"}}">
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Role para cima">
                     <span class="icon-arrow-top" aria-hidden="true"></span>
                     <svg aria-hidden="true">
                       <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
@@ -72,7 +72,7 @@ into the {body} of the default.hbs template --}}
               {{!-- List of tags  --}}
               {{#if tags}}
                 <section class="m-tags in-post">
-                  <h3 class="m-submenu-title">{{t "Tags"}}</h3>
+                  <h3 class="m-submenu-title">Marcadores</h3>
                   <ul>
                     {{#foreach tags}}
                       <li>
@@ -91,9 +91,9 @@ into the {body} of the default.hbs template --}}
             <div class="l-wrapper in-post">
               <div class="m-subscribe-section__content">
                 <div class="m-subscribe-section__text">
-                  <h4 class="m-subscribe-section__title">{{t "Subscribe to our newsletter"}}</h4>
+                  <h4 class="m-subscribe-section__title">Inscreva-se para a nossa lista de email</h4>
                   <p class="m-subscribe-section__description">
-                    {{t "Get the latest collections delivered right to your inbox."}}
+                    Receba nossos artigos mais novos diretamente na sua caixa de entrada.
                   </p>
                 </div>
                 <div class="m-subscribe-section__form">
@@ -116,9 +116,9 @@ into the {body} of the default.hbs template --}}
             <div class="l-wrapper in-post">
               <div class="m-subscribe-section__content">
                 <div class="m-subscribe-section__text">
-                  <h4 class="m-subscribe-section__title">{{t "Subscribe to our newsletter"}}</h4>
+                  <h4 class="m-subscribe-section__title">Inscreva-se para a nossa lista de email</h4>
                   <p class="m-subscribe-section__description">
-                    {{t "Get the latest collections delivered right to your inbox."}}
+                    Receba nossos artigos mais novos diretamente na sua caixa de entrada.
                   </p>
                 </div>
                 <div class="m-subscribe-section__form">
@@ -151,7 +151,7 @@ into the {body} of the default.hbs template --}}
                 <ul class="m-author-links">
                   {{#if primary_author.website}}
                     <li>
-                      <a href="{{primary_author.website}}" target="_blank" rel="noopener" aria-label="{{t "Website"}}">
+                      <a href="{{primary_author.website}}" target="_blank" rel="noopener" aria-label="Website">
                         <span class="icon-globe" aria-hidden="true"></span>
                       </a>
                     </li>
@@ -203,23 +203,23 @@ into the {body} of the default.hbs template --}}
         --}}
       {{/post}}
       {{!-- Related posts --}}
-      {{#get "posts" limit="3" filter="tag:-[hash-es,hash-pt]+id:-{{post.id}}" include="tags,authors" as |related|}}
+      {{#get "posts" limit="3" filter="tag:hash-pt+id:-{{post.id}}" include="tags,authors" as |related|}}
         <section class="m-recommended">
           <div class="l-wrapper in-recommended">
-            <h3 class="m-section-title in-recommended">{{t "Recommended for you"}}</h3>
+            <h3 class="m-section-title in-recommended">Recomendado para você</h3>
             <div class="m-recommended-articles">
               <div class="m-recommended-slider glide js-recommended-slider">
                 <div class="glide__track" data-glide-el="track">
                   <div class="glide__slides">
                     {{!-- The tag below iterates over all the related posts --}}
-                    {{> "loop"}}
+                    {{> "loop-pt-br"}}
                   </div>
                 </div>
                 <div data-glide-el="controls" class="glide__arrows js-controls">
-                  <button data-glide-dir="<" class="m-icon-button filled in-recommended-articles glide-prev" aria-label="{{t "Previous"}}">
+                  <button data-glide-dir="<" class="m-icon-button filled in-recommended-articles glide-prev" aria-label="Anterior">
                     <span class="icon-arrow-left" aria-hidden="true"></span>
                   </button>
-                  <button data-glide-dir=">" class="m-icon-button filled in-recommended-articles glide-next" aria-label="{{t "Next"}}">
+                  <button data-glide-dir=">" class="m-icon-button filled in-recommended-articles glide-next" aria-label="Próxima">
                     <span class="icon-arrow-right" aria-hidden="true"></span>
                   </button>
                 </div>
