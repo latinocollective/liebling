@@ -43,6 +43,12 @@ This header template is shared across all the pages.
                   </a>
                 </li>
               {{/if}}
+              <li class="nav-about {{#if current}} nav-current{{/if}}">
+                <a href="/pt-about">About</a>
+              </li>
+              <li class="nav-designers {{#if current}} nav-current{{/if}}">
+                <a href="/pt-designers">Designers</a>
+              </li>
               {{#if @site.navigation}}
                 {{navigation}}
               {{/if}}
@@ -115,9 +121,6 @@ This header template is shared across all the pages.
           </nav>
           <div class="m-nav__right">
           <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Menú principal">
-            <button class="m-icon-button in-menu-main js-open-search" aria-label="Abrir pesquisa">
-              <span class="icon-search" aria-hidden="true"></span>
-            </button>
             <ul>
               <li class="nav-es {{#if current}} nav-current{{/if}}">
                 <a href="/">EN</a>
@@ -126,6 +129,9 @@ This header template is shared across all the pages.
                 <a href="/es">ES</a>
               </li>
             </ul>
+            <button class="m-icon-button in-menu-main js-open-search-pt-br" aria-label="Abrir pesquisa">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
             <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Alternar modo escuro" tabindex="0">
               <label for="toggle-darkmode" class="sr-only">
                 Alternar modo escuro
