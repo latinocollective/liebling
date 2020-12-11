@@ -33,7 +33,7 @@ into the {body} of the default.hbs template --}}
   {{/if}}
   <div class="m-hero__content" data-aos="fade-down">
     {{#if @site.description}}
-      <h1 class="m-hero-title bigger">{{@site.description}}</h1>
+      <h1 class="m-hero-title bigger">{{{@site.description}}}</h1>
     {{/if}}
     {{#if @labs.subscribers}}
       <a href="{{@site.url}}/subscribe" class="m-button filled">Suscríbete</a>
